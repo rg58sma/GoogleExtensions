@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Carpeta de videos — ContactosSex</title>
+  <style>
+    body { font: 15px/1.45 Arial, sans-serif; max-width: 720px; margin: 28px auto; padding: 0 18px; color: #1a1a1a; }
+    h1 { font-size: 20px; margin: 0 0 8px; }
+    p.sub { color: #555; margin: 0 0 18px; }
+    .card { border: 1px solid #ddd; border-radius: 10px; padding: 16px; background: #fafafa; }
+    button { cursor: pointer; background: #20c997; color: #fff; border: 0; font-weight: 700; padding: 10px 16px; border-radius: 8px; font-size: 14px; margin-right: 8px; }
+    button.sec { background: #333; }
+    #estado { margin: 12px 0; min-height: 1.4em; }
+    #lista { width: 100%; height: 320px; font: 12px/1.4 Consolas, monospace; box-sizing: border-box; padding: 10px; border: 1px solid #ccc; border-radius: 8px; }
+    .ok { color: #0a7d00; font-weight: 700; }
+    .warn { color: #b45309; }
+    #cuando { color: #777; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <h1>Carpeta local de videos</h1>
+  <p class="sub">Elegí la carpeta donde guardás los videos. En cada perfil, la extensión cuenta los videos del sitio y los compara con esa carpeta.</p>
+  <div class="card">
+    <p>Se busca:</p>
+    <ul>
+      <li>una <b>subcarpeta</b> con el mismo nombre de usuario, o</li>
+      <li>archivos de video en la raíz cuyo nombre empiece por el usuario.</li>
+    </ul>
+    <p>Formatos: mp4, webm, mkv, avi, mov, m4v, wmv, mpeg.</p>
+    <p>La carpeta se vuelve a leer sola cada 30 segundos y al entrar a un perfil.
+      Las copias bajadas dos veces (<b>video (1).mp4</b>) no cuentan y se marcan como copia.</p>
+    <button id="btnElegir" type="button">Elegir carpeta</button>
+    <button id="btnRescan" class="sec" type="button">Volver a leer</button>
+    <div id="estado">Todavía no hay carpeta.</div>
+    <div id="cuando"></div>
+    <textarea id="lista" readonly></textarea>
+  </div>
+  <script src="indice.js"></script>
+  <script src="carpeta.js"></script>
+</body>
+</html>

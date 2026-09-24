@@ -1,0 +1,114 @@
+========================================================
+ EXTENSION "Bajar mis chats" - se instala UNA sola vez
+========================================================
+
+Despues de instalarla, cada vez que entres a contactossex.com
+vas a ver abajo a la derecha un boton rosa "Bajar mis chats".
+Un clic y baja el archivo. Sin F12, sin pegar nada, sin ayuda.
+
+--------------------------------------------------------
+ INSTALAR (una vez, 5 pasos)
+--------------------------------------------------------
+1. Abri Google Chrome.
+2. En la barra de direcciones escribi:  chrome://extensions
+   y apreta Enter.
+3. Arriba a la derecha, activa el interruptor
+   "Modo de desarrollador" (Developer mode).
+4. Apreta el boton "Cargar descomprimida"
+   (o "Load unpacked").
+5. Elegi ESTA carpeta:
+      C:\Refurbished\contactossex_export\extension
+   y apreta "Seleccionar carpeta".
+
+Listo. Ya quedo instalada para siempre.
+
+--------------------------------------------------------
+ USARLA (siempre, vos solo)
+--------------------------------------------------------
+1. Entra a contactossex.com con tu cuenta.
+2. Abajo a la derecha vas a ver el boton rosa
+   "Bajar mis chats".  Hace un clic.
+3. Espera (muestra el progreso arriba). Al terminar
+   baja  contactossex_<tu-cuenta>_CCText.sql  a Descargas.
+4. Para otra cuenta: cerra sesion, entra con la otra,
+   y volve a apretar el boton.
+
+--------------------------------------------------------
+ VIDEOS DEL PERFIL vs CARPETA LOCAL
+--------------------------------------------------------
+1. Apreta el icono de la extension (barra de Chrome) o, en
+   contactossex.com, el boton "Elegir carpeta..." de abajo a
+   la izquierda. Se abre la pagina "Carpeta local de videos".
+   Ahi "Elegir carpeta" y selecciona la carpeta de Windows
+   donde estan los videos bajados.
+2. Entra al perfil de alguien. Abajo a la izquierda aparece
+   cuantos videos hay en el sitio y cuantos hay en disco.
+3. La carpeta se busca por nombre de usuario (subcarpeta
+   o archivos que empiezan con ese usuario).
+4. La carpeta se vuelve a leer SOLA: cada 30 segundos, y
+   mientras tenes un perfil abierto, la carpeta de ese usuario
+   cada 3 segundos ("Carpeta actualizandose en vivo"). Los
+   videos que vas bajando aparecen solos; los que todavia se
+   estan descargando salen como [bajando] y no cuentan.
+5. Los videos bajados dos veces ("video (1).mp4",
+   "video (2).mp4") NO cuentan: se muestran marcados como
+   [copia] para que los borres si queres.
+6. Si reiniciaste Chrome y el cuadro dice que perdio el
+   permiso: abri la pagina de la carpeta, apreta "Volver a
+   leer" y elegi "Permitir en cada visita".
+
+--------------------------------------------------------
+ LISTADO DE PERFILES y PANELES
+--------------------------------------------------------
+1. En cualquier pagina con perfiles listados (busqueda,
+   visitas, etc.; no dentro de un perfil) aparece el panel
+   "Perfiles de esta pagina": por cada perfil muestra
+     ● si ya entraste (o ○ si nunca),
+     videos en el sitio / en disco, y el estado
+     (completo, faltan N, sin videos).
+   Filtros: "Solo con videos" y "Ocultar vistos".
+2. Los 3 paneles (Perfiles, Videos y Bajar mis chats) estan
+   juntos abajo a la izquierda. En cada uno: clic en el
+   titulo = plegar / desplegar, "x" = ocultarlo. Con
+   "Paneles" (debajo) volves a mostrar los ocultos.
+
+--------------------------------------------------------
+ DESCARGA AUTOMATICA (version 2.0)
+--------------------------------------------------------
+Panel "Descarga automatica" (arriba de todo, a la izquierda):
+1. Anda a un LISTADO de perfiles del sitio (busqueda,
+   visitas...) y apreta "Empezar en este listado".
+2. Sin que hagas nada mas, pagina por pagina:
+   - primero FILTRA la pagina: revisa todos los perfiles y
+     anota en el registro cuales tienen videos que faltan;
+   - despues, solo a esos (los que TIENEN videos
+     y NO coinciden con el disco: baja los que faltan a
+     CCTex\<perfil>\<id>.mp4 (crea la carpeta si no existe);
+   - los que no tienen videos o ya estan completos se
+     saltean;
+   - cuando la pagina queda completa, apreta "Siguiente"
+     y sigue. Termina en la ultima pagina.
+   Al empezar tambien reanuda descargas cortadas de CCTex.
+3. OPCIONAL (casilla "Sacar captura de cada perfil", apagada
+   de entrada): a cada perfil que tiene faltantes lo abre y
+   le saca una CAPTURA: CCTex\<perfil>\perfil_AAAA-MM-DD.png
+   (una por dia). Para eso la ventana tiene que estar A LA
+   VISTA (no minimizada) y esa pestana al frente. Si no, no
+   captura (queda anotado) pero sigue bajando los videos.
+   No cierres esa pestana.
+4. Pausar / Reanudar / Detener cuando quieras. Si se cierra
+   la sesion, falla el paso de pagina o hay 10 errores
+   seguidos, se pausa sola y dice por que.
+5. Los videos a los que no tenes acceso se saltean
+   ("sin acceso"); no se intenta saltar ninguna restriccion.
+
+--------------------------------------------------------
+ IMPORTAR a MySQL (puerto 3307)
+--------------------------------------------------------
+   mysql -u root -P 3307 -p < "C:\Users\Juan\Downloads\contactossex_Tincho22x5_CCText.sql"
+
+--------------------------------------------------------
+ NOTA
+--------------------------------------------------------
+El archivo tiene mensajes y fotos privados (tuyos y de
+otras personas). Guardalo con cuidado.

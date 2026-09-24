@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Exportar chats ContactosSex a CCText",
+  "version": "2.0",
+  "description": "Exporta chats a .sql y, en cada perfil, compara la cantidad de videos con una carpeta local.",
+  "permissions": ["storage", "alarms", "downloads"],
+  "host_permissions": [
+    "https://contactossex.com/*",
+    "https://thumbs.contactossex.com/*",
+    "https://*.contactossex.com/*",
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Carpeta de videos ContactosSex"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.contactossex.com/*", "https://contactossex.com/*"],
+      "js": ["indice.js", "paneles.js", "listado.js", "autoPanel.js", "content.js", "descargas.js", "perfilVideos.js", "perfilesLista.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
